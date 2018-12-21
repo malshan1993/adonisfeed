@@ -1,14 +1,14 @@
 'use strict'
 
 const { ServiceProvider } = require('@adonisjs/fold');
-const AdonisFeed;
+const Feed = require('./Src');
 
 class FeedProvider extends ServiceProvider {
 
   register () {
     this.app.singleton('Adonis/Addons/AdonisFeed', function (app) {
 
-        return AdonisFeed = 1;
+        return new Feed();
     })
   }
 
